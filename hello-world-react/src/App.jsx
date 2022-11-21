@@ -1,8 +1,8 @@
-import HelloWorld from './components/HelloWorld'
+import About from './components/About'
 
 function App() {
   return (
-    <HelloWorld />
+    <About />
   )
 }
 
