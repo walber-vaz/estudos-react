@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from '../Image';
+import PropTypes from 'prop-types'
 
 function UserProfile(props) {
   const { user } = props;
@@ -11,5 +12,10 @@ function UserProfile(props) {
     </div>
   )
 }
+
+UserProfile.propTypes = {
+  name: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired
+} 
 
 export default UserProfile
