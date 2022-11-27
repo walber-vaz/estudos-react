@@ -5,6 +5,9 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: #212121;
+  color: whitesmoke;
+  flex-direction: column;
 }
 
 .main-header {
