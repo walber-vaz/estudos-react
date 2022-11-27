@@ -2,7 +2,9 @@ import './App.css'
 
 function App() {
   return (
-    <h1>Hello, React</h1>
+    <main className='main'>
+      <h2 className='main-header'>React CRUD</h2>
+    </main>
   )
 }
 
