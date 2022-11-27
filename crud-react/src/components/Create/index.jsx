@@ -1,23 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Checkbox, Form } from 'semantic-ui-react';
 
 import './styles.css';
 
-const Create = () => (
-  <Form className='create-form'>
-    <Form.Field>
-      <label>First Name</label>
-      <input placeholder='Digite seu nome' />
-    </Form.Field>
-    <Form.Field>
-      <label>Last Name</label>
-      <input placeholder='Digite seu sobrenome' />
-    </Form.Field>
-    <Form.Field>
-      <Checkbox label='Eu concordo com os Termos e Condições' />
-    </Form.Field>
-    <Button type='submit'>Enviar</Button>
-  </Form>
-);
+
+function Create() {
+  const [name, setName] = useState('');
+  const [sobrenome, setSobrenome] = useState('');
+  const [checkbox, setCheckbox] = useState(false);
+
+  function postData() {
+    console.log(name, sobrenome, checkbox)
+  }
+
+  return (
+    <div>
+      <Form className='create-form'>
+        <Form.Field>
+          <label>First Name</label>
+          <input placeholder='Digite seu nome' onChange={(e) => setName(e.target.value)} />
+        </Form.Field>
+        <Form.Field>
+          <label>Last Name</label>
+          <input placeholder='Digite seu sobrenome' onChange={(e) => setSobrenome(e.target.value)} />
+        </Form.Field>
+        <Form.Field>
+          <Checkbox label='Eu concordo com os Termos e Condições' onChange={() => setCheckbox(!checkbox)} />
+        </Form.Field>
+        <Button type='submit' onClick={postData}>Enviar</Button>
+      </Form>
+    </div>
+  )
+};
 
 export default Create;
