@@ -20,6 +20,7 @@
     "react/react-in-jsx-scope": "off",
     "react/prefer-stateless-function": "off",
     "no-console": "off",
-    "react/state-in-constructor": "off"
+    "react/state-in-constructor": "off",
+    "class-methods-use-this": "off"
   }
 }
