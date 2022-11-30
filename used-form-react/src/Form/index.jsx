@@ -1,25 +1,27 @@
 import React, { Component } from 'react';
+import CheckBox from '../CheckBox';
+import Description from '../Description';
+import Name from '../Name';
+import SelectLang from '../SelectLang';
+import Sobrenome from '../Sobrenome';
+
+const indexState = {
+  name: '',
+  lastname: '',
+  description: '',
+  lang: '',
+  confirm: false,
+};
 
 class Form extends Component {
-  constructor() {
-    super();
-    this.state = {
-      name: '',
-      lastname: '',
-      description: '',
-      lang: '',
-      confirm: false,
-    };
+  state = { ...indexState };
 
-    this.handleChanges = this.handleChanges.bind(this);
-  }
-
-  handleChanges({ target: { name, value, type, checked } }) {
+  handleChanges = ({ target: { name, value, type, checked } }) => {
     value = type === 'checkbox' ? checked : value;
     this.setState({
       [name]: value,
     });
-  }
+  };
 
   render() {
     const { name, lastname, lang, description, confirm } = this.state;
@@ -27,42 +29,11 @@ class Form extends Component {
       <div>
         <h1>React Form</h1>
         <form>
-          <label>
-            Name
-            <input
-              type="text"
-              name="name"
-              id="name"
-              value={name}
-              onChange={this.handleChanges}
-            />
-          </label>
-          <label>
-            Sobrenome
-            <input
-              type="text"
-              name="lastname"
-              id="lastname"
-              value={lastname}
-              onChange={this.handleChanges}
-            />
-          </label>
-          <textarea
-            name="description"
-            value={description}
-            onChange={this.handleChanges}
-          />
-          <select name="lang" value={lang} onChange={this.handleChanges}>
-            <option value="Javascript">Javascript</option>
-            <option value="Typescript">Typescript</option>
-          </select>
-          <input
-            type="checkbox"
-            name="confirm"
-            id="confirm"
-            value={confirm}
-            onChange={this.handleChanges}
-          />
+          <Name value={name} handleChanges={this.handleChanges} />
+          <Sobrenome value={lastname} handleChanges={this.handleChanges} />
+          <Description value={description} handleChanges={this.handleChanges} />
+          <SelectLang value={lang} handleChanges={this.handleChanges} />
+          <CheckBox value={confirm} handleChanges={this.handleChanges} />
         </form>
       </div>
     );
