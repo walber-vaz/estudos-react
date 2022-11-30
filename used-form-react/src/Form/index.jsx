@@ -1,49 +1,72 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
 
-function Form() {
-  const [name, setName] = useState('');
-  const [lastname, setLastname] = useState('');
+class Form extends Component {
+  constructor() {
+    super();
+    this.state = {
+      name: '',
+      lastname: '',
+      description: '',
+      lang: '',
+      confirm: false,
+    };
 
-  const handleChangeName = (event) => {
-    setName({ name: event.target.value });
-  };
+    this.handleChanges = this.handleChanges.bind(this);
+  }
 
-  const handleChangeSobrenome = (event) => {
-    setLastname({ lastname: event.target.value });
-  };
+  handleChanges({ target: { name, value, type, checked } }) {
+    value = type === 'checkbox' ? checked : value;
+    this.setState({
+      [name]: value,
+    });
+  }
 
-  return (
-    <div>
-      <h1>React Form</h1>
-      <form>
-        <label htmlFor="name">
-          Name
-          <input
-            type="text"
-            name="name"
-            id="name"
-            value={name}
-            onChange={(event) => handleChangeName(event)}
+  render() {
+    const { name, lastname, lang, description, confirm } = this.state;
+    return (
+      <div>
+        <h1>React Form</h1>
+        <form>
+          <label>
+            Name
+            <input
+              type="text"
+              name="name"
+              id="name"
+              value={name}
+              onChange={this.handleChanges}
+            />
+          </label>
+          <label>
+            Sobrenome
+            <input
+              type="text"
+              name="lastname"
+              id="lastname"
+              value={lastname}
+              onChange={this.handleChanges}
+            />
+          </label>
+          <textarea
+            name="description"
+            value={description}
+            onChange={this.handleChanges}
           />
-        </label>
-        <label htmlFor="lastname">
-          Sobrenome
+          <select name="lang" value={lang} onChange={this.handleChanges}>
+            <option value="Javascript">Javascript</option>
+            <option value="Typescript">Typescript</option>
+          </select>
           <input
-            type="text"
-            name="sobrenome"
-            id="sobrenome"
-            value={lastname}
-            onChange={(event) => handleChangeSobrenome(event)}
+            type="checkbox"
+            name="confirm"
+            id="confirm"
+            value={confirm}
+            onChange={this.handleChanges}
           />
-        </label>
-        <textarea />
-        <select>
-          <option value="Javascript">Javascript</option>
-          <option value="Typescript">Typescript</option>
-        </select>
-      </form>
-    </div>
-  );
+        </form>
+      </div>
+    );
+  }
 }
 
 export default Form;
