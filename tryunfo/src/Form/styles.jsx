@@ -9,6 +9,7 @@ const ContainerForm = styled.section`
   margin: 1rem auto;
   border: 1px solid red;
   width: 1200px;
+  gap: 10rem;
 `;
 
 const FormContainer = styled.div`
@@ -96,15 +97,13 @@ const FormStyled = styled.form`
   }
 
   input[type='checkbox'] {
+    display: flex;
     width: 1rem;
     height: 1rem;
     border-radius: 0.5rem;
     border: 1px solid #282c34;
     background-color: rgb(248, 248, 248);
     outline: none;
-    position: absolute;
-    margin-left: -1.5rem;
-    left: 45%;
   }
 
   button {
@@ -127,6 +126,14 @@ const FormStyled = styled.form`
   button:hover {
     background-color: #363c47;
     color: rgb(248, 248, 248);
+  }
+
+  #label-check {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 0.5rem;
   }
 `;
 

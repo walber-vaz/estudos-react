@@ -1,5 +1,6 @@
 import { bool, func, string } from 'prop-types';
 import React from 'react';
+import Card from '../Card';
 import { ContainerForm, FormContainer, FormStyled } from './styles';
 
 function Form(props) {
@@ -112,7 +113,7 @@ function Form(props) {
               <option value="muito raro">Muito Raro</option>
             </select>
           </label>
-          <label htmlFor="cardTrunfo">
+          <label htmlFor="cardTrunfo" id="label-check">
             Super Trunfo:
             <input
               type="checkbox"
@@ -133,6 +134,16 @@ function Form(props) {
           </button>
         </FormStyled>
       </FormContainer>
+      <Card
+        cardName={cardName}
+        cardDescription={cardDescription}
+        cardAttr1={cardAttr1}
+        cardAttr2={cardAttr2}
+        cardAttr3={cardAttr3}
+        cardImage={cardImage}
+        cardRare={cardRare}
+        cardTrunfo={cardTrunfo}
+      />
     </ContainerForm>
   );
 }
