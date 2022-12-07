@@ -1,0 +1,46 @@
+:root {
+  --font-primary: 'Montserrat', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+html, body, :root {
+  font-family: var(--font-primary);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 5.5rem;
+}
+
+h2 {
+  font-size: 5rem;
+}
+
+h3 {
+  font-size: 4.5rem;
+}
+
+h4 {
+  font-size: 4rem;
+}
+
+h5 {
+  font-size: 3.5rem;
+}
+
+h6 {
+  font-size: 3rem;
+}
