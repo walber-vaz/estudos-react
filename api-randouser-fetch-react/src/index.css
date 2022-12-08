@@ -1,0 +1,65 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: 400;
+  margin-bottom: 1.6rem;
+}
+
+h2 {
+  font-size: 5.5rem;
+  font-weight: 400;
+  margin-bottom: 1.6rem;
+}
+
+h3 {
+  font-size: 5rem;
+  font-weight: 400;
+  margin-bottom: 1.6rem;
+}
+
+h4 {
+  font-size: 4.5rem;
+  font-weight: 400;
+  margin-bottom: 1.6rem;
+}
+
+h5 {
+  font-size: 4rem;
+  font-weight: 400;
+  margin-bottom: 1.6rem;
+}
+
+h6 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 1.6rem;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-bottom: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  text-decoration: underline;
+}
