@@ -3,13 +3,13 @@ import Img from '../Img'
 import Sum from '../Sum'
 import Title from '../Title'
 
-import '../../styles/App.modules.css'
+import styles from './Card.module.css'
 
 const Card = (props) => {
   const { title, description, url, sum } = props.content
 
   return (
-    <div className="App">
+    <div className={styles.app}>
       <Title title={title} />
       <Description description={description} />
       <Sum sum={sum} />

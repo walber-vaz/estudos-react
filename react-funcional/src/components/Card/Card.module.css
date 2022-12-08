@@ -1,4 +1,4 @@
-.App {
+.app {
   display: flex;
   flex-direction: column;
   border: 0.5rem solid #dedede;
@@ -11,7 +11,7 @@
   max-width: 350px;
 }
 
-.App img {
+.app img {
   border-radius: 1.5rem;
   width: 100%;
   height: 100%;
@@ -19,7 +19,7 @@
   margin-top: 1.8rem;
 }
 
-.App p {
+.app p {
   font-size: 1.8rem;
   text-align: center;
   color: #333;
