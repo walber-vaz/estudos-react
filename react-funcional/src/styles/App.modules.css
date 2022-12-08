@@ -1,0 +1,23 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  border: 0.5rem solid #dedede;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.App img {
+  width: 100%;
+  max-width: 30rem;
+  height: auto;
+  border-radius: 1.5rem;
+}
+
+.App p {
+  font-size: 1.8rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 1rem;
+}
