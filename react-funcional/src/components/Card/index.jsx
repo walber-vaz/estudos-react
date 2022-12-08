@@ -6,7 +6,7 @@ import Title from '../Title'
 import '../../styles/App.modules.css'
 
 const Card = (props) => {
-  const { title, description, url, sum } = props
+  const { title, description, url, sum } = props.content
 
   return (
     <div className="App">

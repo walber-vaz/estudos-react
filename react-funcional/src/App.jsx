@@ -1,22 +1,20 @@
-import { useState } from "react"
 import Card from "./components/Card"
 
 function App() {
-  const [title, setTitle] = useState('Walber (w2k)')
-  const [description, setDescription] = useState('FullStack Web Developer')
-  const [url, setUrl] = useState('https://via.placeholder.com/150')
-
-  const sumFunc = (a, b) => {
-    return (a + b)
+  const content = {
+    title: 'Walber (w2k)',
+    description: 'FullStack Web Developer',
+    url: 'https://media0.giphy.com/media/1iNIkQBAwEkUuTpikf/giphy.gif?cid=790b7611116f6b6298f8e00987081551b9ee5af80b4f6bde&rid=giphy.gif&ct=g',
+    sum(a, b) {
+      if (typeof a !== 'number' || typeof b !== 'number') {
+        throw new Error('The parameters must be numbers')
+      }
+      return (Number(a) + Number(b))
+    }
   }
 
   return (
-    <Card
-      title={title}
-      description={description}
-      url={url}
-      sum={`2 + 2 = ${sumFunc(2, 2)}`}
-    />
+    <Card content={content} />
   )
 }
 

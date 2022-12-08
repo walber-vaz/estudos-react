@@ -7,13 +7,16 @@
   justify-content: center;
   align-items: center;
   box-shadow: 8px 8px 2px 5px rgba(0, 0, 0, 0.2);
+  min-height: 500px;
+  max-width: 350px;
 }
 
 .App img {
-  width: 100%;
-  max-width: 30rem;
-  height: auto;
   border-radius: 1.5rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-top: 1.8rem;
 }
 
 .App p {

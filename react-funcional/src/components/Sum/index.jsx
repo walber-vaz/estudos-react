@@ -1,10 +1,8 @@
 import React from 'react'
 
-const Sum = (props) => {
-  const { sum } = props
-
+const Sum = ({sum}) => {
   return (
-    <p>{sum}</p>
+    <p>{`2 + 2 = ${sum(2, 2)}`}</p>
   )
 }
 
