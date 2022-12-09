@@ -17,6 +17,16 @@ function App() {
   )
 }
 
+App.defaultProps = {
+  content: {
+    title: "Nenhum título encontrado",
+    description: "Nenhuma descrição encontrada",
+    url: "Nenhuma url encontrada",
+    sum: () => "Nenhuma função encontrada",
+    arryLang: ["Nenhuma linguagem encontrada"],
+  },
+}
+
 App.propTypes = {
   content: shape({
     title: string.isRequired,
