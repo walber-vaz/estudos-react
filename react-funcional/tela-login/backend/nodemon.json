@@ -1,9 +1,10 @@
 {
   "verbose": true,
   "watch": [
+    "src",
     "src/server.js"
   ],
-  "ext": "js",
+  "ext": "js, mjs, jsx, ts, tsx, json, node",
   "ignore": [
     "*.test.js",
     ".git",
