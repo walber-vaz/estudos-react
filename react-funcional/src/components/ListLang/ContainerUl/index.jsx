@@ -1,5 +1,7 @@
 import React from 'react'
 
+import PropTypes from 'prop-types'
+
 import styles from '../ListLang.module.css'
 
 const ContainerUl = (props) => {
@@ -14,6 +16,10 @@ const ContainerUl = (props) => {
       </ul>
     </div>
   )
+}
+
+ContainerUl.propTypes = {
+  arryLang: PropTypes.array,
 }
 
 export default ContainerUl

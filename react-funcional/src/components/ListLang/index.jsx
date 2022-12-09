@@ -1,7 +1,8 @@
 import ContainerLang from './ContainerLang'
 import ContainerUl from './ContainerUl'
-import styles from './ListLang.module.css'
 import Title from './Title'
+
+import PropTypes from 'prop-types'
 
 const ListLang = (props) => {
   const { arryLang } = props
@@ -14,6 +15,10 @@ const ListLang = (props) => {
       </ContainerLang>
     </>
   )
+}
+
+ListLang.propTypes = {
+  arryLang: PropTypes.array,
 }
 
 export default ListLang
