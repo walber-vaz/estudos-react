@@ -19,11 +19,11 @@ function App() {
 
 App.propTypes = {
   content: shape({
-    title: string,
-    description: string,
-    url: string,
-    sum: func,
-    arryLang: array
+    title: string.isRequired,
+    description: string.isRequired,
+    url: string.isRequired,
+    sum: func.isRequired,
+    arryLang: array.isRequired
   }),
 }
 

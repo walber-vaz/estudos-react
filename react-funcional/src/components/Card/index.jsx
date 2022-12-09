@@ -20,12 +20,21 @@ const Card = (props) => {
   )
 }
 
+Card.defaultProps = {
+  content: {
+    title: "Nenhum título encontrado",
+    description: "Nenhuma descrição encontrada",
+    url: "Nenhuma url encontrada",
+    sum: () => "Nenhuma função encontrada",
+  },
+}
+
 Card.propTypes = {
   content: PropTypes.shape({
-    title: PropTypes.string,
-    description: PropTypes.string,
-    url: PropTypes.string,
-    sum: PropTypes.func,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
+    sum: PropTypes.func.isRequired,
   }),
 }
 

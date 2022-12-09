@@ -8,8 +8,12 @@ const Sum = ({sum}) => {
   )
 }
 
+Sum.defaultProps = {
+  sum: () => "Nenhuma função encontrada",
+}
+
 Sum.propTypes = {
-  sum: PropTypes.func,
+  sum: PropTypes.func.isRequired,
 }
 
 export default Sum

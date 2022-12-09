@@ -12,8 +12,12 @@ const ContainerLang = (props) => {
   )
 }
 
+ContainerLang.defaultProps = {
+  children: "Nenhum componente filho encontrado",
+}
+
 ContainerLang.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
 }
 
 export default ContainerLang

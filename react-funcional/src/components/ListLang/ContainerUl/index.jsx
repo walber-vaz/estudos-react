@@ -18,8 +18,12 @@ const ContainerUl = (props) => {
   )
 }
 
+ContainerUl.defaultProps = {
+  arryLang: ["Nenhuma linguagem encontrada"],
+}
+
 ContainerUl.propTypes = {
-  arryLang: PropTypes.array,
+  arryLang: PropTypes.array.isRequired,
 }
 
 export default ContainerUl

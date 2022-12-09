@@ -10,8 +10,12 @@ const Img = (props) => {
   )
 }
 
+Img.defaultProps = {
+  url: "Nenhuma imagem ou url encontrada",
+}
+
 Img.propTypes = {
-  url: PropTypes.string,
+  url: PropTypes.string.isRequired,
 }
 
 export default Img

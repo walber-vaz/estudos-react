@@ -17,6 +17,10 @@ const ListLang = (props) => {
   )
 }
 
+ListLang.defaultProps = {
+  arryLang: ["Nenhuma linguagem encontrada"],
+}
+
 ListLang.propTypes = {
   arryLang: PropTypes.array,
 }

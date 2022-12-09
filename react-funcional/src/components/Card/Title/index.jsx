@@ -10,6 +10,10 @@ const Title = (props) => {
   )
 }
 
+Title.defaultProps = {
+  title: "Nenhum título encontrado",
+}
+
 Title.propTypes = {
   title: PropTypes.string,
 }
