@@ -59,7 +59,7 @@ const cadastrarUsuario = (event) => {
   dados.set("password", hash)
 
   // name user in lowercase
-  dados.set("name", dados.get("name").toLowerCase())
+  dados.set("name", dados.get("name").trim().toLowerCase())
 
   const usuario = {
     id: Math.random().toString(36).substr(2, 9),
