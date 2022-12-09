@@ -1,7 +1,7 @@
-import Description from '../Description'
-import Img from '../Img'
-import Sum from '../Sum'
-import Title from '../Title'
+import Description from './Description'
+import Img from './Img'
+import Sum from './Sum'
+import Title from './Title'
 
 import styles from './Card.module.css'
 
