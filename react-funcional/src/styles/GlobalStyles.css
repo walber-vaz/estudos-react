@@ -23,6 +23,7 @@ body {
   max-width: 1200px;
   align-items: center;
   justify-content: center;
+  gap: 5rem;
 }
 
 /* Global style h */
