@@ -1,0 +1,77 @@
+.formControl {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5rem;
+  align-items: flex-start;
+  min-width: 100%;
+  padding: 3rem;
+}
+
+.formControl form {
+  display: flex;
+  flex-direction: column;
+  border: 0.2rem solid #dedede;
+  padding: 2rem;
+  box-shadow: .6rem .6rem .4rem .2rem rgba(0, 0, 0, 0.2);
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.formControl h2 {
+  text-align: center;
+}
+
+.formControl form label {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.formControl form input {
+  font-size: 1.5rem;
+  padding: 1rem;
+  border: 0.2rem solid #dedede;
+  border-radius: 0.5rem;
+}
+
+.formControl form button {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border: 0.5rem solid #dedede;
+  border-radius: 0.5rem;
+  background-color: #dedede;
+  margin-top: 1rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.formControl form button:hover {
+  background-color: #cfcfcf;
+}
+
+.formControl form button:active {
+  background-color: #bfbfbf;
+}
+
+.formControl form button:focus {
+  outline: none;
+}
+
+.formControl form button:disabled {
+  background-color: #dedede;
+  color: #bfbfbf;
+}
+
+.formControl form button:disabled:hover {
+  background-color: #dedede;
+  color: #bfbfbf;
+}
+
+.formControl form button:disabled:active {
+  background-color: #dedede;
+  color: #bfbfbf;
+}
+
+.formControl form button:disabled:focus {
+  outline: none;
+}

@@ -16,16 +16,6 @@ body {
   background-color: #f5f5f5;
 }
 
-#root {
-  display: flex;
-  min-height: 100vh;
-  margin: 0 auto;
-  max-width: 1200px;
-  align-items: center;
-  justify-content: center;
-  gap: 5rem;
-}
-
 /* Global style h */
 h1 {
   font-size: 5rem;
