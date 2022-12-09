@@ -58,13 +58,44 @@ const cadastrarUsuario = (event) => {
   const hash = bcrypt.hashSync(dados.get("password"), salt)
   dados.set("password", hash)
 
+  // name user in lowercase
+  dados.set("name", dados.get("name").toLowerCase())
+
   const usuario = {
     id: Math.random().toString(36).substr(2, 9),
     name: dados.get("name"),
     email: dados.get("email"),
     password: dados.get("password")
   }
-  console.log(usuario)
+
+  const checkUserExists = (user) => {
+    const users = JSON.parse(localStorage.getItem("users")) || []
+    const userExists = users.find((u) => u.name === user.name)
+    return userExists
+  }
+
+  if (checkUserExists(usuario)) {
+    alert("Usuário já cadastrado")
+    form.reset()
+    return
+  }
+
+  const saveUser = (user) => {
+    const users = JSON.parse(localStorage.getItem("users")) || []
+    users.push(user)
+    localStorage.setItem("users", JSON.stringify(users))
+  }
+
+  const { name, id } = usuario
+
+  const user = {
+    name,
+    id
+  }
+
+  saveUser(user)
+  alert("Usuário cadastrado com sucesso")
+
   form.reset()
 }
 
