@@ -1,5 +1,9 @@
 import express from 'express';
+
 import { router } from './routers/routes.mjs';
+import connectionDatabase from './db/database.mjs';
+
+connectionDatabase();
 
 const PORT = process.env.PORT || 3333;
 
