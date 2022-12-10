@@ -11,5 +11,6 @@ router.get('/users', UserController.index);
 router.post('/users', UserController.create);
 
 router.put('/users/:id', UserMiddlewares.validateId, UserController.update);
+router.delete('/users/:id', UserMiddlewares.validateId, UserController.delete);
 
 export { router };

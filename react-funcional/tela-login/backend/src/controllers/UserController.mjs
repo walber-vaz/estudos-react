@@ -1,4 +1,3 @@
-import { response } from 'express';
 import { v4 as uuid } from 'uuid';
 import crypto from 'crypto';
 
@@ -52,6 +51,15 @@ export default {
     try {
       await response.user.save();
       return response.status(200).json({ message: 'User updated' });
+    } catch (error) {
+      return response.status(500).json({ error: error.message });
+    }
+  },
+
+  async delete(request, response) {
+    try {
+      await response.user.remove();
+      return response.status(200).json({ message: 'User deleted' });
     } catch (error) {
       return response.status(500).json({ error: error.message });
     }
