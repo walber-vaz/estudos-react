@@ -1,8 +1,15 @@
+import MainContent from './components/MainContent'
+import SideBar from './components/SideBar'
+
+import './styles/components/app.sass'
+
 function App() {
   return (
-    <div>
-      <h1>Olá, Mundo!</h1>
-    </div>
+    <main id="container">
+      <h1>w2k</h1>
+      <SideBar />
+      <MainContent />
+    </main>
   )
 }
 
